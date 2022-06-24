@@ -1,0 +1,136 @@
+<html>
+
+<head>
+  <style>
+    @font-face {
+      font-family: Asimov;
+      src: url(Asimov.ttf);
+    }
+
+    #tournament-header {
+      text-align: center;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding:24px;
+     }
+
+    #tournament-header h2 {
+      color: #181818;
+      font-size: calc(40px + 2.5vw);
+      font-family: Asimov;
+      background-color: transparent;
+    }
+
+    #tournament-header a {
+      color: #181818;
+      font-family:Helvetica, sans-serif;
+      font-weight: bold
+    }
+
+    #tournament-header a:hover {
+      color: #91bbbd;
+    }
+
+    #tournament-style {
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding:24px;
+    }
+
+    #tournament-style h1 {
+      color: #91bbbd;
+      font-family: Asimov;
+    }
+
+    #tournament-style p {
+      color: #91bbbd;
+      font-family:Helvetica, sans-serif;
+      font-weight: bold
+    }
+
+    #tournament-style a {
+      color: #91bbbd;
+      font-family:Helvetica, sans-serif;
+      font-weight: bold
+      font-style: underline;
+    }
+
+    #tournament-style a:hover {
+      color: #f7efa7;
+      font-family:Helvetica, sans-serif;
+      font-weight: bold
+      font-style: underline;
+    }
+  </style>
+
+
+
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://use.typekit.net/vlj7tzj.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Blue Copper Chess Club</title>
+  <link rel="icon" type="image/x-icon" href="Images/favicon.png">
+  <meta property="og:image" content="Images/social.png">
+  <meta property="og:image:type" content="image/png">
+</head>
+
+<body>
+
+  <audio id="yourTurn">
+    <source src="Images/yourTurn.mp3" type="audio/mpeg">
+  </audio>
+
+  <div style="background-image: url(images/tournament-bg.jpg); background-position: center" id="tournament-header" class="content">
+      <br><p> <a href="index.html"> LEARN MORE ABOUT US</a></p>
+      <h2>BLUE COPPER CHESS CLUB</h2><br>
+  </div>
+
+  <div id="tournament-style" class="content">
+      <h1>INVITATIONAL BLITZ TOURNAMENT 2022</h1>
+      <!-- <img src="Images/poster.png" class="responsive"> -->
+      <p>6 PM at Blue Copper 2000.
+        <br>Single-elimination, 5+0 Blitz games.
+        <br>No registration required.</p>
+  </div>
+    <div style="background-color: #91bbbd" id="tournament-style" class="content">
+      <p style="color: #181818">Pizza by Central 9th Market.
+        <br>Drinks by Blue Copper Coffee.
+        <br>Come to play or just to hang.
+      </p>
+    </div>
+       <div id="tournament-style" class="content">
+        <p>Shoot us an Instagram message if you have any questions! 
+        <br><a href="https://www.instagram.com/bluecopperchessclub/"> @bluecopperchessclub </a></p>
+    </div>
+
+  <script>
+    var x = document.getElementById("yourTurn");
+
+    function playAudio() {
+      x.play();
+    }
+
+    // https://stackoverflow.com/a/54437356
+    function getNextDayOfTheWeek(dayName, excludeToday = true, refDate = new Date()) {
+      const dayOfWeek = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
+        .indexOf(dayName.slice(0, 3).toLowerCase());
+      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+      const fullDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+      if (dayOfWeek < 0) return;
+      refDate.setHours(0, 0, 0, 0);
+      refDate.setDate(refDate.getDate() + +!!excludeToday +
+        (dayOfWeek + 7 - refDate.getDay() - +!!excludeToday) % 7);
+      return `${months[refDate.getMonth()]} ${refDate.getDate()}`;
+    }
+
+    window.addEventListener('load', () => {
+      // populates the date field, switches to 'next week' if it's after noon o clock!
+      document.getElementById('mobile-date').textContent = `meet this week (${getNextDayOfTheWeek("Thursday", new Date().getHours() > 10 ? true : false)})`
+      document.getElementById('date').textContent = `meet this week (${getNextDayOfTheWeek("Thursday", new Date().getHours() > 10 ? true : false)})`
+    });
+  </script>
+
+</body>
+
+</html>
