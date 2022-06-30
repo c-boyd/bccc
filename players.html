@@ -140,6 +140,20 @@
     "CB draws HP",
     "IR beats DV",
     "IR beats HP",
+    // 6.30
+    "JE beats KH",
+    "JE beats KH",
+    "HP beats SD",
+    "TD beats EC",
+    "CB draws IR",
+    "HP beats PA",
+    "EC beats CB",
+    "LH beats IR",
+    "JY beats PA",
+    "PA beats JY",
+    "LH beats JE",
+    "TD beats HP",
+    "LH beats JE",
     ];
 
     // consts for the web platform the player uses
@@ -168,6 +182,7 @@
     var players = [
       { name: "Carter B.", initials: "CB", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: LI, handle: "caboyd", display: true },
       { name: "Jackson G.", initials: "JG", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: LI, handle: "grassleaf", display: true },
+      { name: "Josh E.", initials: "JE", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: NONE, handle: "joshe", display: true },
       { name: "Eric C.", initials: "EC", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: NONE, handle: "ericc", display: true },
       { name: "Drew V.", initials: "DV", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: LI, handle: "drchva", display: true },
       { name: "Tyler D.", initials: "TD", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: LI, handle: "tmdba", display: true },
@@ -184,7 +199,8 @@
       { name: "Ian R.", initials: "IR", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: LI, handle: "fetusthatcould", display: true },
       { name: "Oscar R.", initials: "OR", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: NONE, handle: "oscarr", display: true },
       { name: "Jacob I.", initials: "JI", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: NONE, handle: "jacobi", display: true },
-        { name: "Daniel X.", initials: "DX", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: NONE, handle: "danielx", display: true }
+      { name: "Daniel X.", initials: "DX", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: NONE, handle: "danielx", display: true },
+      { name: "Jason Y.", initials: "JY", irl_mmr: "1200", web_mmr: "Loading..", win: 0, loss: 0, tie: 0, web_platform: NONE, handle: "jasony", display: true }
       ];
 
     function buildProfileText(player) {
@@ -315,7 +331,7 @@
       document.getElementById('mobile-date').textContent = `meet this week (${getNextDayOfTheWeek("Thursday", new Date().getHours() > 10 ? true : false)})`
       document.getElementById('date').textContent = `meet this week (${getNextDayOfTheWeek("Thursday", new Date().getHours() > 10 ? true : false)})`
       players.forEach(player => {
-        if(player.win + player.loss + player.tie < 4) player.display = false;
+        if(player.win + player.loss + player.tie < 6) player.display = false;
         if (player.display) { // only render player if we have their display flag set to true
           addRow(player);
           if (player.web_platform === LI)

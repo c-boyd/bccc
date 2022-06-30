@@ -7,6 +7,12 @@
       src: url(Asimov.ttf);
     }
 
+    body {
+ background-image: url("Images/tournbg.png");
+   background-repeat: repeat;
+     background-size: 800px;
+}
+
     #tournament-header {
       text-align: center;
         margin-left: 0%;
@@ -37,15 +43,36 @@
         margin-left: 10%;
         margin-right: 10%;
         padding:24px;
+        margin-bottom: 0px;
+        margin-top:0px;
     }
+
+    #tournament-style2 {
+        text-align: center;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding:0px;
+      }
+
+      img{
+          max-width:40%;
+      }
 
     #tournament-style h1 {
       color: #91bbbd;
       font-family: Asimov;
     }
 
-    #tournament-style p {
-      color: #91bbbd;
+    #tournament-style p1 {
+      color: #181818;
+      font-size: calc(14px + 0.5vw);
+      font-family:Helvetica, sans-serif;
+      font-weight: bold
+    }
+
+    #tournament-style p2 {
+      color: #181818;
+      font-size: calc(12px + 0.25vw);
       font-family:Helvetica, sans-serif;
       font-weight: bold
     }
@@ -89,21 +116,38 @@
 
   <div id="tournament-style" class="content">
       <h1>INVITATIONAL BLITZ TOURNAMENT 2022</h1>
-      <!-- <img src="Images/poster.png" class="responsive"> -->
-      <p>6 PM at Blue Copper 2000.
-        <br>Single-elimination, 5+0 Blitz games.
-        <br>No registration required.</p>
   </div>
+
+</div>
+<div id="tournament-style2" class="content">
+<img src="Images/shapes2.png">
+</div>
+
     <div style="background-color: #91bbbd" id="tournament-style" class="content">
-      <p style="color: #181818">Pizza by Central 9th Market.
-        <br>Drinks by Blue Copper Coffee.
-        <br>Come to play or just to hang.
-      </p>
+      <p1>
+   6 PM at Blue Copper 2000.<br>
+   Single-elimination bracket, 5+0 Blitz games. <br>
+   </p1>
+ </br></br>
+  <p2>
+No registration required--but show up by 6:15 if you plan to play. <br>
+We will do our best to form a fair bracket, so come with an estimate of how good at chess you are. <br>
+First and second place players will recieve a t-shirt and a tournament trophy. <br>
+No entry fee, and no cost to show up and eat, but anything you <i> can </i> pitch in toward the cost of hosting this is appreciated. <br>
+Blue Copper Chess Club t-shirts and bumper stickers will be available for sale, as well. <br>
+<br> <br>
+
+    <p1>    Pizza by Central 9th Market. Drinks by Blue Copper Coffee. <br>
+        Come to play or just to hang.</p1>
+      </br> </br> <p2>
+      Shoot us an Instagram message if you have any questions!
+      <br><a href="https://www.instagram.com/bluecopperchessclub/" style="color: #f7efa7"> @bluecopperchessclub </a></p>
+    </p2>
     </div>
-       <div id="tournament-style" class="content">
-        <p>Shoot us an Instagram message if you have any questions!
-        <br><a href="https://www.instagram.com/bluecopperchessclub/"> @bluecopperchessclub </a></p>
-    </div>
+
+<div id="tournament-style2" class="content">
+<img src="Images/shapes.png">
+</div>
 
   <script>
     var x = document.getElementById("yourTurn");
