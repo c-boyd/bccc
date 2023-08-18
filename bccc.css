@@ -74,6 +74,15 @@ div.home {
     font-size: 14px;
   }
 
+  .home a {
+    font-family: "aglet-mono", mono;
+    font-weight: 300;
+    color: #dc9a9a;
+    font-size: 16px;
+    padding-left: 18px;
+    text-decoration: none;
+  }
+
 /* collapsible */
 
 .collapsible {
