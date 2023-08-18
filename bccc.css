@@ -1,0 +1,123 @@
+body {
+  margin: 25%;
+  margin-top: 10%;
+  background-color: #181818;
+}
+
+@media screen and (max-width: 700px) {
+
+body {
+  margin: 12%;
+  margin-top: 25%;
+  }
+
+  div.about {
+    width: 100%;
+  }
+
+    .about p {
+    font-size: 14px;
+  }
+
+}
+
+/* HOME */
+
+div.home {
+  width: 90%;
+  text-align: left;
+}
+
+  .home h1 {
+    font-family: "aglet-mono", mono;
+    font-weight: 300;
+    font-style: italic;
+    color: #dc9a9a;
+    font-size: 16px;
+  }
+
+  .home h2 {
+    font-family: "aglet-mono", mono;
+    font-weight: 300;
+    font-style: italic;
+    color: #858585;
+    font-size: 16px;
+  }
+
+  .home h3 {
+    font-family: "aglet-mono", mono;
+    font-weight: 300;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 16px;
+  }
+
+
+  .home p1 {
+    font-family: "aglet-mono", mono;
+    font-weight: 300;
+    color: #dc9a9a;
+    font-size: 14px;
+  }
+
+  .home p2 {
+    font-family: "aglet-mono", mono;
+    font-weight: 300;
+    color: #858585;
+    font-size: 14px;
+  }
+
+  .home p3 {
+    font-family: "aglet-mono", mono;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+/* collapsible */
+
+.collapsible {
+  background-color: #181818;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible:hover {
+  background-color: #161616;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #181818;
+}
+
+/* BUTTON HOME */
+
+
+
+.btn-bot{
+   position: fixed;
+   bottom: 12%;
+   right: 15%;
+   margin-left:-50px;
+   width:100px;
+   background-color: #DC9A9A;
+   border: none;
+   border-radius: 4px;
+   color: #181818;
+   font-family: "aglet-mono", mono;
+   font-weight: 300;
+  font-style: italic;
+   text-align: left;
+   padding: 4px;
+   padding-left: 6px;
+   padding-right: 0px;
+}
