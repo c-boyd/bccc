@@ -1,7 +1,7 @@
 body {
-  margin: 25%;
+  margin: 30%;
   margin-top: 10%;
-  background-color: #181818;
+  background-color: #ffffff;
 }
 
 @media screen and (max-width: 700px) {
@@ -47,6 +47,14 @@ div.home {
     font-size: 16px;
   }
 
+  .home h4 {
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #7aa687;
+    font-size: 20px;
+    text-align: center;
+  }
 
   .home p1 {
     font-family: "aglet-mono", mono;
@@ -76,6 +84,15 @@ div.home {
     font-size: 16px;
     padding-left: 18px;
     text-decoration: none;
+  }
+
+  .responsive {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 /* collapsible */
