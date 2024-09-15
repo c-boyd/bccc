@@ -1,7 +1,7 @@
 body {
   margin: 30%;
   margin-top: 10%;
-  background-color: #181818;
+  background-color: #f4f4f4;
 }
 
 @media screen and (max-width: 700px) {
@@ -64,17 +64,19 @@ div.home {
   }
 
   .home p2 {
-    font-family: "aglet-mono", mono;
+    font-family: "span", serif;
     font-weight: 300;
-    color: #858585;
-    font-size: 14px;
+    color: #898e76;
+    font-style: normal;
+    font-size: 16px;
   }
 
   .home p3 {
-    font-family: "aglet-mono", mono;
-    font-weight: 300;
-    color: #f4f4f4;
-    font-size: 14px;
+    font-family: "span", serif;
+    font-weight: 400;
+      color: #898e76;
+    font-style: italic;
+    font-size: 16px;
   }
 
   .home a {
